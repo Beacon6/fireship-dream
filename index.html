@@ -7,7 +7,21 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <h1>Unsplash Photo Search</h1>
+
+      <div id="result">
+        Photo will appear here
+      </div>
+
+      <form>
+        <label for="prompt">Prompt</label>
+        <textarea name="prompt" maxlength="160"></textarea>
+
+        <button type="submit">Search</button>
+      </form>
+    </main>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

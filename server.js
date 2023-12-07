@@ -21,7 +21,11 @@ app.post("/dream", async (req, res) => {
         orientation: "squarish",
     });
 
-    res.send({ searchResult });
+    const photo = searchResult.response.results[0].urls.full;
+    console.log("Currently displaying:");
+    console.log(photo);
+
+    res.send({ photo });
 });
 
 app.listen(8080, () => console.log("Search photos on http://localhost:8080/dream"));
