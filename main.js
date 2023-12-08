@@ -19,10 +19,16 @@ form.addEventListener("submit", async (e) => {
     }),
   });
 
-  const photo = await response.json();
+  if (response.ok) {
+    const photo = await response.json();
 
-  const result = document.querySelector("#result");
-  result.innerHTML = `<img src="${photo.photo}" width="512" />`;
+    const result = document.querySelector("#result");
+    result.innerHTML = `<img src="${photo.photo}" width="512" />`;
+  } else {
+    const error = await response.text();
+    alert(error);
+    console.error(error);
+  }
 
   hideSpinner();
 });
