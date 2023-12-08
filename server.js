@@ -23,10 +23,13 @@ app.post("/dream", async (req, res) => {
 
   try {
     const photo = searchResult.response.results[0].urls.full;
+    const profileLink = searchResult.response.results[0].user.links.html;
+    const profileName = searchResult.response.results[0].user.name;
+
     console.log("Currently displaying:");
     console.log(photo);
 
-    res.send({ photo });
+    res.send({ photo, profileLink, profileName });
   } catch (error) {
     console.error(error);
     res.status(500).send("Something went wrong...");
