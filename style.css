@@ -3,7 +3,8 @@ body {
   background-color: #0b0b0e;
   color: white;
   font-family: 'Poppins', sans-serif;
-  margin-top: 50px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main {
@@ -15,6 +16,8 @@ h1 {
   font-family: 'Rubik Microbe', cursive;
   font-weight: 400;
   font-size: 5rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #result {
@@ -25,7 +28,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 form {
@@ -55,7 +57,7 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 button:hover {
@@ -66,12 +68,10 @@ button:hover {
   display: none;
 }
 
-
 .spinner {
   animation: spin 1s linear infinite;
   display: inline-block;
 }
-
 
 @keyframes spin {
   from {transform:rotate(0deg);}
